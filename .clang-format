@@ -1,0 +1,9 @@
+---
+BasedOnStyle: WebKit
+AlignOperands: 'true'
+BreakBeforeBraces: Allman
+Language: Cpp
+PointerAlignment: Left
+SortIncludes: 'true'
+Standard: Cpp11
+AlignAfterOpenBracket: true
