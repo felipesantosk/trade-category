@@ -19,7 +19,7 @@ double Trade::GetValue() const
     return m_value;
 }
 
-const std::string& Trade::ClientSector() const
+const std::string& Trade::GetClientSector() const
 {
     return m_clientSector;
 }
