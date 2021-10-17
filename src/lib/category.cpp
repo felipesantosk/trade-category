@@ -5,7 +5,6 @@
 
 namespace trade
 {
-
 bool Defaulted::Check(const boost::posix_time::ptime& referenceDate,
                       const trade::ITrade& trade) const
 {
@@ -58,5 +57,4 @@ std::shared_ptr<ICategory> findTradeCategory(const boost::posix_time::ptime& ref
 
     return (itr != std::cend(categoryByPriority)) ? *itr : nullptr;
 }
-
 }
