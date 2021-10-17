@@ -42,3 +42,17 @@ MEDIUMRISK
 MEDIUMRISK
 ```
 
+# Question 1 - Answer
+
+- The implementation can be found [src](./src) folder and follows this structure:
+   - [bin](./bin) - Binary folder with main and functions to parse input and generate output.
+   - [lib](./lib) - Library with the actual implementation about the objective 
+      - [./lib/trade.h] - Trade and ITrade classes following the question structure. 
+      - [./lib/category.h] - Category classes and function
+   - [regression-test] - Regression tests to validate the actual code.
+
+# Question 2 - Answer 
+
+- In this case, it will create a new category class, PEP, inheriting from ICategory and [at categoryByPriority in findTradeCategory function](./src/lib/category.cpp#L46) will be the first element. 
+- It will change the trade classes to contain PoliticallyExposed information and will change the readTrade method on main to expect the new value.
+
