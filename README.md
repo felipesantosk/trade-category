@@ -49,12 +49,12 @@ MEDIUMRISK
 ## Project structure
 
 - [src](./src) The project 
-   - [bin](./bin) - Binary folder with main and functions to parse input and generate output.
-   - [lib](./lib) - Library with the actual objective implementation  
-      - [./lib/trade.h] - Trade and ITrade classes following the question structure. 
-      - [./lib/category.h] - Category classes and function
-   - [test](./test) - (For the future) Units tests of Trade library with catch2
-- [regression-test](./regression-tests) - Regression tests to validate the actual code.
+   - [bin](./src/bin) - Binary folder with main and functions to parse input and generate output.
+   - [lib](./src/lib) - Library with the actual objective implementation  
+      - [trade.h](./src/lib/trade.h) - Trade and ITrade classes following the question structure. 
+      - [category.h](./src/lib/category.h) - Category classes and function
+   - [test](./src/test) - (For the future) Units tests of Trade library with catch2
+- [regression-test](./regression-test) - Regression tests to validate the actual code.
 - Obs1: For DateTime logic is use boost::posix_time::ptime
 - Obs2: The other library dependencies, like boost, are getting by the [Conan Package Manager](https://conan.io/).
 
