@@ -8,11 +8,11 @@
 
 boost::posix_time::ptime str_to_ptime(const std::string& str);
 trade::Trade readTrade();
-std::pair<boost::posix_time::ptime, std::vector<trade::Trade>> readArgs();
+std::pair<boost::posix_time::ptime, std::vector<trade::Trade>> readInput();
 
 int main()
 {
-    const auto [referenceDate, trades] = readArgs();
+    const auto [referenceDate, trades] = readInput();
 
     for (const auto& trade : trades)
     {
@@ -31,7 +31,7 @@ int main()
     return 0;
 }
 
-std::pair<boost::posix_time::ptime, std::vector<trade::Trade>> readArgs()
+std::pair<boost::posix_time::ptime, std::vector<trade::Trade>> readInput()
 {
     std::string refDateStr;
     int tradesNum = 0;

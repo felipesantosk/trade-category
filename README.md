@@ -44,15 +44,23 @@ MEDIUMRISK
 
 # Question 1 - Answer
 
-- The implementation can be found [src](./src) folder and follows this structure:
+- The code is tested with Clang 10.0 on Ubuntu 20.04 ( Docker image latest)
+
+## Project structure
+
+- [src](./src) The project 
    - [bin](./bin) - Binary folder with main and functions to parse input and generate output.
-   - [lib](./lib) - Library with the actual implementation about the objective 
+   - [lib](./lib) - Library with the actual objective implementation  
       - [./lib/trade.h] - Trade and ITrade classes following the question structure. 
       - [./lib/category.h] - Category classes and function
-   - [regression-test] - Regression tests to validate the actual code.
+   - [test](./test) - (For the future) Units tests of Trade library with catch2
+- [regression-test](./regression-tests) - Regression tests to validate the actual code.
+- Obs1: For DateTime logic is use boost::posix_time::ptime
+- Obs2: The other library dependencies, like boost, are getting by the [Conan Package Manager](https://conan.io/).
 
 # Question 2 - Answer 
 
-- In this case, it will create a new category class, PEP, inheriting from ICategory and [at categoryByPriority in findTradeCategory function](./src/lib/category.cpp#L46) will be the first element. 
-- It will change the trade classes to contain PoliticallyExposed information and will change the readTrade method on main to expect the new value.
+- In this case:
+   1. It will create a new category class, PEP, inheriting from ICategory and [at categoryByPriority in findTradeCategory function](./src/lib/category.cpp#L46) will be the first element to be the first category to check. 
+   2. It will change the [trade classes](./src/lib/trade.h) to contain PoliticallyExposed information and it will change the [readTrade function on main](./src/bin/main.cpp#L65) file to expect the new value.
 

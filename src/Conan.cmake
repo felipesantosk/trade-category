@@ -26,7 +26,8 @@ list(TRANSFORM IGNORE_BOOST_LIBS APPEND "=True")
 list(TRANSFORM BOOST_LIBS PREPEND "boost:without_")
 list(TRANSFORM BOOST_LIBS APPEND "=False")
 
-conan_cmake_run(REQUIRES boost/1.77.0
+conan_cmake_run(REQUIRES boost/1.77.0 
+                         catch2/2.11.1
                 BASIC_SETUP CMAKE_TARGETS
                 BUILD missing
                 OPTIONS boost:shared=True
